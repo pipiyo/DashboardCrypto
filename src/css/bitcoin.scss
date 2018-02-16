@@ -1,0 +1,137 @@
+html{
+    height: 100%;
+}
+
+body{
+   height: 100%;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+h1 {
+	font-size: 23px;
+	color: #000;
+}
+
+span{
+	color: #fff;
+}
+
+.nav {
+	.buttonGrande{
+	    width: 159px;
+    	cursor: pointer;
+    	height: 82px;
+	    text-decoration: none;
+	    font-size: 18px;
+	}
+
+	.BTC{
+	    background: #D4D42A;
+	    background: linear-gradient(to left, #EAEA19, #CCCC1D);
+	}
+
+	.ETH{
+	    background: #2D59C7;
+	    background: linear-gradient(to left, #3C6FEE, #2E53B1);
+	}
+
+	.active {
+		border: 1px solid red;
+	}
+
+	.buttonPequeño{
+		margin-top: 30px;
+    	width: 159px;
+	    cursor: pointer;
+	    text-decoration: none;
+	    font-size: 18px;
+	}
+
+	.mes{
+	    background: #FFBF00;
+	    background: linear-gradient(to left, #FACC2E, #DBA901);
+	}
+
+	.hora{
+	    background: #3ADF00;
+	    background: linear-gradient(to left, #40FF00, #31B404);
+	}
+
+}
+
+
+
+.contenedor-grafico {
+	background: #394264;
+	border-radius: 5px;
+	position: relative;
+    overflow: hidden;
+}
+				
+.grafico {
+  padding: 2rem 1rem 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  color: #fff;
+  font-size: 80%;
+
+  .caja-barras {
+     position: relative;
+
+  	 .barras {
+	  position: absolute;
+	  display: flex;
+	  flex-flow: row nowrap;
+	  justify-content: space-around;
+	  align-items: flex-end;
+	  width: 100%; 
+	  height: 100%;
+
+	  .barra{
+	  	height: 0px;
+	    width: 30px;
+	    background-color: red;
+
+		@for $i from 0 through 25 {
+		    &[data-valor="#{$i}"] { height: 30px + (31px * $i); }
+		}
+		
+	  }
+  	}
+  }
+
+	.eje-x {
+	  display: flex;
+  	  flex-flow: row nowrap;
+  	  justify-content: space-around;
+  	  background-color: blue;
+	}
+	.eje-y {
+	  left: 0;
+	  bottom: 0rem;
+	  width: 100%;
+	  padding: 1rem 1rem 0 2rem;
+	  height: 80%;
+
+		li {
+		  height: 30px;
+		  border-top: 1px solid #777;
+		} 
+		
+		[data-ejey]:before {
+		  content: attr(data-ejey);
+		  display: inline-block;
+		  width: 2rem;
+		  text-align: right;
+		  line-height: 0;
+		  position: relative;
+		  left: -2.5rem;
+		  top: -.5rem;
+		} 
+	}
+}

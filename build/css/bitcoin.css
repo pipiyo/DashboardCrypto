@@ -1,0 +1,153 @@
+@charset "UTF-8";
+html {
+  height: 100%; }
+
+body {
+  height: 100%; }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0; }
+
+h1 {
+  font-size: 23px;
+  color: #000; }
+
+span {
+  color: #fff; }
+
+.nav .buttonGrande {
+  width: 159px;
+  cursor: pointer;
+  height: 82px;
+  text-decoration: none;
+  font-size: 18px; }
+
+.nav .BTC {
+  background: #D4D42A;
+  background: linear-gradient(to left, #EAEA19, #CCCC1D); }
+
+.nav .ETH {
+  background: #2D59C7;
+  background: linear-gradient(to left, #3C6FEE, #2E53B1); }
+
+.nav .active {
+  border: 1px solid red; }
+
+.nav .buttonPequeño {
+  margin-top: 30px;
+  width: 159px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 18px; }
+
+.nav .mes {
+  background: #FFBF00;
+  background: linear-gradient(to left, #FACC2E, #DBA901); }
+
+.nav .hora {
+  background: #3ADF00;
+  background: linear-gradient(to left, #40FF00, #31B404); }
+
+.contenedor-grafico {
+  background: #394264;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden; }
+
+.grafico {
+  padding: 2rem 1rem 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  color: #fff;
+  font-size: 80%; }
+  .grafico .caja-barras {
+    position: relative; }
+    .grafico .caja-barras .barras {
+      position: absolute;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      align-items: flex-end;
+      width: 100%;
+      height: 100%; }
+      .grafico .caja-barras .barras .barra {
+        height: 0px;
+        width: 30px;
+        background-color: red; }
+        .grafico .caja-barras .barras .barra[data-valor="0"] {
+          height: 30px; }
+        .grafico .caja-barras .barras .barra[data-valor="1"] {
+          height: 61px; }
+        .grafico .caja-barras .barras .barra[data-valor="2"] {
+          height: 92px; }
+        .grafico .caja-barras .barras .barra[data-valor="3"] {
+          height: 123px; }
+        .grafico .caja-barras .barras .barra[data-valor="4"] {
+          height: 154px; }
+        .grafico .caja-barras .barras .barra[data-valor="5"] {
+          height: 185px; }
+        .grafico .caja-barras .barras .barra[data-valor="6"] {
+          height: 216px; }
+        .grafico .caja-barras .barras .barra[data-valor="7"] {
+          height: 247px; }
+        .grafico .caja-barras .barras .barra[data-valor="8"] {
+          height: 278px; }
+        .grafico .caja-barras .barras .barra[data-valor="9"] {
+          height: 309px; }
+        .grafico .caja-barras .barras .barra[data-valor="10"] {
+          height: 340px; }
+        .grafico .caja-barras .barras .barra[data-valor="11"] {
+          height: 371px; }
+        .grafico .caja-barras .barras .barra[data-valor="12"] {
+          height: 402px; }
+        .grafico .caja-barras .barras .barra[data-valor="13"] {
+          height: 433px; }
+        .grafico .caja-barras .barras .barra[data-valor="14"] {
+          height: 464px; }
+        .grafico .caja-barras .barras .barra[data-valor="15"] {
+          height: 495px; }
+        .grafico .caja-barras .barras .barra[data-valor="16"] {
+          height: 526px; }
+        .grafico .caja-barras .barras .barra[data-valor="17"] {
+          height: 557px; }
+        .grafico .caja-barras .barras .barra[data-valor="18"] {
+          height: 588px; }
+        .grafico .caja-barras .barras .barra[data-valor="19"] {
+          height: 619px; }
+        .grafico .caja-barras .barras .barra[data-valor="20"] {
+          height: 650px; }
+        .grafico .caja-barras .barras .barra[data-valor="21"] {
+          height: 681px; }
+        .grafico .caja-barras .barras .barra[data-valor="22"] {
+          height: 712px; }
+        .grafico .caja-barras .barras .barra[data-valor="23"] {
+          height: 743px; }
+        .grafico .caja-barras .barras .barra[data-valor="24"] {
+          height: 774px; }
+        .grafico .caja-barras .barras .barra[data-valor="25"] {
+          height: 805px; }
+  .grafico .eje-x {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    background-color: blue; }
+  .grafico .eje-y {
+    left: 0;
+    bottom: 0rem;
+    width: 100%;
+    padding: 1rem 1rem 0 2rem;
+    height: 80%; }
+    .grafico .eje-y li {
+      height: 30px;
+      border-top: 1px solid #777; }
+    .grafico .eje-y [data-ejey]:before {
+      content: attr(data-ejey);
+      display: inline-block;
+      width: 2rem;
+      text-align: right;
+      line-height: 0;
+      position: relative;
+      left: -2.5rem;
+      top: -.5rem; }
